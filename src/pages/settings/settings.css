@@ -1,0 +1,327 @@
+/* src/pages/settings/settings.css */
+
+.settings-page {
+  min-height: 100vh;
+  background: #0f0f0f;
+  color: rgba(255, 255, 255, 0.92);
+  color-scheme: dark;
+}
+
+.settings-topbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  background: rgba(32, 32, 32, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.settings-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 14px;
+}
+
+.settings-brand:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.settings-logo {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.settings-brand-name {
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.settings-brand-name .task {
+  color: rgba(230, 232, 238, 0.95);
+}
+
+.settings-brand-name .flow {
+  color: #625fd5;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.settings-top-btn {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.90);
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+}
+
+.settings-top-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.settings-top-btn.danger {
+  border-color: rgba(255, 88, 110, 0.22);
+  color: rgba(255, 180, 190, 0.95);
+}
+
+.settings-content {
+  width: min(900px, calc(100% - 40px));
+  margin: 28px auto 60px;
+}
+
+.settings-hero {
+  margin: 10px 0 18px;
+}
+
+.settings-title {
+  font-size: 36px;
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+.settings-subtitle {
+  margin: 10px 0 0;
+  opacity: 0.72;
+}
+
+.settings-card {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+}
+
+.settings-card-head {
+  padding: 16px 16px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.settings-card-title {
+  font-weight: 750;
+}
+
+.settings-saved {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(120, 255, 220, 0.22);
+  background: rgba(120, 255, 220, 0.08);
+  color: rgba(200, 255, 240, 0.92);
+}
+
+.settings-form {
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.settings-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.settings-field {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-field label {
+  font-size: 13px;
+  opacity: 0.75;
+  font-weight: 650;
+}
+
+.settings-select {
+  height: 44px;
+  border-radius: 14px;
+  padding: 0 12px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.92);
+
+  outline: none;
+}
+
+.settings-select:focus {
+  border-color: rgba(98, 95, 213, 0.40);
+  box-shadow: 0 0 0 3px rgba(98, 95, 213, 0.16);
+}
+
+.settings-select option {
+  background: #151515;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.settings-hint {
+  font-size: 12px;
+  opacity: 0.62;
+}
+
+.settings-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+  padding: 14px;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.settings-switch-text {
+  display: grid;
+  gap: 3px;
+}
+
+.settings-switch-title {
+  font-weight: 700;
+}
+
+.settings-switch-sub {
+  font-size: 13px;
+  opacity: 0.70;
+}
+
+.toggle {
+  width: 54px;
+  height: 32px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.toggle .knob {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  transition: 0.18s ease;
+}
+
+.toggle.on {
+  border-color: rgba(98, 95, 213, 0.30);
+  background: rgba(98, 95, 213, 0.16);
+}
+
+.toggle.on .knob {
+  left: 25px;
+  background: rgba(98, 95, 213, 0.28);
+  border-color: rgba(98, 95, 213, 0.30);
+}
+
+.settings-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.settings-btn {
+  height: 40px;
+  min-width: 140px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 14px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.86);
+
+  white-space: nowrap;
+}
+
+.settings-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.settings-btn.primary {
+  border-color: rgba(98, 95, 213, 0.30);
+  background: rgba(98, 95, 213, 0.22);
+}
+
+.settings-btn.primary:hover {
+  background: rgba(98, 95, 213, 0.28);
+}
+
+@media (max-width: 700px) {
+  .settings-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .settings-topbar {
+    padding: 0 16px;
+  }
+
+  .settings-content {
+    width: min(900px, calc(100% - 24px));
+  }
+
+  .settings-title {
+    font-size: 30px;
+  }
+
+  .settings-btn {
+    width: 100%;
+  }
+}

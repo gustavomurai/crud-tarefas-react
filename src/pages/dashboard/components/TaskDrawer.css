@@ -1,0 +1,213 @@
+/* src/pages/dashboard/components/TaskDrawer.css */
+
+.tf-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  z-index: 90;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tf-drawer {
+  width: min(520px, 92vw);
+  height: 100%;
+  background: rgba(20, 20, 22, 0.94);
+  border-left: 1px solid rgba(255, 255, 255, 0.10);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.tf-drawer-head {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tf-drawer-title {
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.tf-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.90);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.tf-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tf-drawer-body {
+  padding: 16px;
+  overflow: auto;
+  flex: 1;
+}
+
+.tf-detail-card {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px;
+}
+
+.tf-detail-title {
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.tf-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.tf-muted {
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.tf-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+  font-size: 12px;
+}
+
+.tf-badge.done {
+  border-color: rgba(120, 255, 220, 0.25);
+  background: rgba(120, 255, 220, 0.10);
+}
+
+.tf-badge.danger {
+  border-color: rgba(255, 88, 110, 0.30);
+  background: rgba(255, 88, 110, 0.12);
+}
+
+.tf-badge.info {
+  border-color: rgba(98, 95, 213, 0.30);
+  background: rgba(98, 95, 213, 0.12);
+}
+
+.tf-badge.neutral {
+  opacity: 0.90;
+}
+
+.tf-detail-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 10px 12px;
+  align-items: center;
+}
+
+.tf-k {
+  font-size: 12px;
+  opacity: 0.62;
+  font-weight: 800;
+  letter-spacing: 0.15px;
+}
+
+.tf-v {
+  font-size: 13.5px;
+  font-weight: 650;
+}
+
+.tf-detail-desc {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* Footer alinhado (sem “torto”) */
+.tf-drawer-footer {
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tf-drawer-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tf-btn {
+  height: 40px;
+  min-width: 140px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 14px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.86);
+
+  white-space: nowrap;
+}
+
+.tf-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tf-btn.primary {
+  border-color: rgba(98, 95, 213, 0.30);
+  background: rgba(98, 95, 213, 0.22);
+}
+.tf-btn.primary:hover {
+  background: rgba(98, 95, 213, 0.28);
+}
+
+.tf-btn.danger {
+  border-color: rgba(255, 88, 110, 0.28);
+  color: rgba(255, 170, 180, 0.95);
+}
+.tf-btn.danger:hover {
+  background: rgba(255, 88, 110, 0.10);
+}
+
+.tf-btn.danger.confirm {
+  border-color: rgba(255, 88, 110, 0.38);
+  background: rgba(255, 88, 110, 0.10);
+}
+
+@media (max-width: 520px) {
+  .tf-btn {
+    width: 100%;
+  }
+  .tf-drawer-footer-right {
+    width: 100%;
+  }
+}

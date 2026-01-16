@@ -1,0 +1,114 @@
+/* ======================================================
+   GLOBAL THEME — TaskFlow
+   ====================================================== */
+
+/* ✅ Fonte Inter (Google Fonts) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Altura total */
+html,
+body {
+  height: 100%;
+}
+
+/* Base do app */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+
+  background-color: #0f0f0f;
+  color: #e6e8ee;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Variáveis globais */
+:root {
+  --bg-main: #0f0f0f;
+
+  --card: #202020;
+  --card-strong: #252525;
+
+  --input: rgba(255, 255, 255, 0.04);
+
+  --border-soft: rgba(255, 255, 255, 0.10);
+  --border-very-soft: rgba(255, 255, 255, 0.06);
+
+  --text: #e6e8ee;
+  --text-muted: rgba(230, 232, 238, 0.65);
+
+  --accent: #625fd5;
+  --accent-hover: #706df0;
+  --accent-soft: rgba(98, 95, 213, 0.20);
+
+  --danger: #ff4d6d;
+
+  /* Espaçamentos “controlados” por densidade (Settings) */
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --radius-12: 12px;
+  --radius-14: 14px;
+  --radius-16: 16px;
+  --radius-18: 18px;
+}
+
+/* Densidade compacta (Settings) */
+:root[data-density="compacta"] {
+  --space-10: 8px;
+  --space-12: 10px;
+  --space-14: 12px;
+  --space-16: 14px;
+  --space-18: 16px;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Normalização forte pra parar “torto” em botões/inputs entre páginas e browsers */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+
+  /* Isso evita baseline estranho e texto “subindo” */
+  line-height: 1.2;
+}
+
+button {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+}
+
+/* Evita ícones e SVGs causando desalinhamento por baseline */
+img,
+svg {
+  display: block;
+}
+
+/* Evita scroll horizontal por algum elemento escapando */
+body {
+  overflow-x: hidden;
+}
